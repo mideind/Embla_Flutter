@@ -34,7 +34,6 @@ import './prefs.dart' show Prefs;
 import './session.dart' show SessionRoute;
 import './theme.dart' show lightThemeData, darkThemeData;
 import './hotword.dart' show HotwordDetector;
-import './web.dart' show preloadHTMLDocuments;
 // import './util.dart' show readServerAPIKey;
 
 void main() async {
@@ -85,7 +84,6 @@ void main() async {
 
   // Init/preload these to prevent any lag after launching app
   await preloadAnimationFrames();
-  //await preloadHTMLDocuments();
   await EmblaSession.prepare();
 
   // Initialize singleton, loading hotword-related assets into memory

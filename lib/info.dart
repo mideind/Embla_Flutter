@@ -59,7 +59,7 @@ Future<String> getHumanFriendlyVersionString() async {
   return "$version ($osName)";
 }
 
-/// Return marketing version string, e.g. "1.4.0", "1.3.3 dbg"
+/// Return marketing version string, e.g. "1.4.1", "1.3.3 dbg"
 Future<String> getMarketingVersion() async {
   final packageInfo = await PackageInfo.fromPlatform();
   if (kDebugMode == true) {

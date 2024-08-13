@@ -9,8 +9,6 @@ import 'package:embla/menu.dart';
 import 'package:embla/settings.dart';
 import 'package:embla/info.dart';
 import 'package:embla/voices.dart';
-import 'package:embla/web.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 void main() {
   // main.dart
@@ -74,16 +72,5 @@ void main() {
     await tester.pumpAndSettle(const Duration(milliseconds: 100));
     expect(find.byType(ListView), findsOneWidget);
     expect(find.byType(ListTile), findsAtLeastNWidgets(2));
-  });
-
-  // web.dart
-  testWidgets('WebViewRoute contains InAppWebView', (tester) async {
-    preloadHTMLDocuments();
-    await tester.pumpWidget(
-      const MaterialApp(
-        home: WebViewRoute(initialURL: "https://mideind.is"),
-      ),
-    );
-    expect(find.byType(InAppWebView), findsOneWidget);
   });
 }

@@ -196,7 +196,8 @@ class SessionRouteState extends State<SessionRoute> with SingleTickerProviderSta
   }
 
   Future<bool> isConnectedToInternet() async {
-    return (await Connectivity().checkConnectivity() != ConnectivityResult.none);
+    final List<ConnectivityResult> connectivityResult = await Connectivity().checkConnectivity();
+    return !connectivityResult.contains(ConnectivityResult.none);
   }
 
   // Set text field string (and optionally, an associated image)

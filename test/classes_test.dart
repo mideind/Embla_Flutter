@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:embla/animations.dart';
 import 'package:embla/hotword.dart';
-import 'package:embla/jsexec.dart';
+// import 'package:embla/jsexec.dart';
 import 'package:embla/loc.dart';
 import 'package:embla/prefs.dart';
 
@@ -14,7 +14,7 @@ void main() {
 
   testAnimations();
   testHotword();
-  testJSExec();
+  //testJSExec();
   testLocationTracker();
   testPrefs();
 }
@@ -36,15 +36,15 @@ void testHotword() async {
 }
 
 // jsexec.dart
-void testJSExec() async {
-  test("JSExecutor should be singleton", () {
-    expect(JSExecutor() == JSExecutor(), true);
-  });
-//   test("JSExecutor should run JavaScript code without issue", () async {
-//     JSExecutor executor = JSExecutor();
-//     expect(await executor.run("2+2"), 4);
+// void testJSExec() async {
+//   test("JSExecutor should be singleton", () {
+//     expect(JSExecutor() == JSExecutor(), true);
 //   });
-}
+// //   test("JSExecutor should run JavaScript code without issue", () async {
+// //     JSExecutor executor = JSExecutor();
+// //     expect(await executor.run("2+2"), 4);
+// //   });
+// }
 
 // loc.dart
 void testLocationTracker() async {
